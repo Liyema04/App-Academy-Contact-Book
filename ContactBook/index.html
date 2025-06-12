@@ -5,15 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact Book</title>
     </head>
-    <body>
+    <body onload="fetchContacts()">
         <div id="table">Contacts loading...</div>
         <button id="refresh" type="button">Refresh</button>
         <button id="addContact" type="button">Add Contact</button>
 
         <script src="config.js"></script>
         <script>
-            
+            function fetchContacts() {
+                fetch(rootPath + "controller/get-contacts/")
+                .then(function(response) { // call-back function
+                    return response.json(); //converts respons object -> .json array 
+                })
+                .then(function(data) {
+                    displayOutput(data); // Takes json array coming from server, unravels and displays into table...
+                    console.log(data)
+                }) 
+            }
+
+            function displayOutput(data) {
+                output = "<table>";
+                
+                for(a in data) {
+                    output += `
+                        <tr>
+                            <td><img src="${rootPath}controller/uploads/${data[a].avatar}"></td>
+                            <td><h5>${data[a].firstname}</h5></td>
+                            <td><h5>${data[a].lastname}</h5></td>
+                        </tr>
+                    `
+                }
+                output += "</table>";
+                document.getElementById("table").innerHTML = output;
+            }
         </script>
         </div>
-    </body>
+    </body> 
 </html>
