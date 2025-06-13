@@ -25,11 +25,35 @@
 
         <script src="config.js"></script>
         <script>
+            document.getElementById("submitForm").addEventListener('click', submitForm);
+            document.getElementById("homeLink").addEventListener('click', homeLink);
+
             function submitForm(e) {
                 e.preventDefault(); // preventing page from reloading after submission [click(submit)]
 
                 const form = new FormData(document.querySelector('#editForm'));
                 form.append('apiKey', apiKey); // implies we are adding new information to this form
+
+                fetch(rootPath + 'controller/insert-contact/', {
+                    method: 'POST',
+                    headers: {'Accept': 'application/json, *.*'},
+                    body: form
+                })
+                .then(function(response) {
+                    return response.text();
+                })
+                .then(function(data) {
+                    if(data == "1") {
+                        alert("Contact added.");
+                        homeLink()
+                    } else {
+                        alert(data);
+                        homeLink() 
+                    }
+                })                
+            }
+            function homeLink() {
+                    window.open("index.html", "_self"); //Built-in function -> opens up a new tab -> '_self' -> opens in the same window.
             }
 
         </script>
