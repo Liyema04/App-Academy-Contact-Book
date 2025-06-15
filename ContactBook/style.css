@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 75%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: white; /*#ADD8E6 - Light blue color */
+}
+/* --Base-- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+span > h1 {
+    background:  #B0C4DE; /* Powder Blue */
+    border-radius: 6px;
+    border: none;
+    width: 200px;
+    color: white;
+    font-weight: 600;
+    font-size: 600;
+    text-shadow: #ddd;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*mod*/
+}
+
+#table { /*mod*/
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 24px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #B0C4DE; /* Powder Blue */
+}
+
+#table > h3 {
+    color: white;
+    font-size: 600;
+    font-weight: 600;
+}
+
+
+table {
+    min-width: 600px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    table-layout: fixed;
+}
+
+table :hover {
+    cursor: pointer;
+}
+
+tr {
+    background-color: #E0FFFF; /* Light Cyan */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /*mod*/
+}
+
+td {
+    width: 33.33%;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+    overflow: hidden;   
+}
+
+/* Add border only to the first cell of each row */
+td:first-child {
+    border-left: 1px solid #ddd;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Add border only to the last cell of each row */
+td:last-child {
+    border-right: 1px solid #ddd;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Add top and bottom borders to create complete row border */
+tr td {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+td h5 {
+    text-align: center;
+    margin: 0;
+}
+
+td img {
+    max-width: 150px;
+    width: 100%;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*Redirect Buttons*/
+
+#buttonsFlex {
+    text-align: center;
+}
+
+.refreshBtn, .addContactBtn {
+    margin: 0 15px;  /* Add horizontal spacing between buttons */
+}
+
+.refreshBtn {
+    background:  #B0C4DE; /* Powder Blue */
+    border-radius: 6px;
+    border: none;
+    width: auto;
+    height: 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 600;
+    text-shadow: #ddd;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*mod*/
+}
+
+.refreshBtn:hover {
+    cursor: pointer;
+    background: deepskyblue;
+}
+
+.addContactBtn {
+    background:  #B0C4DE; /* Powder Blue */
+    border-radius: 6px;
+    border: none;
+    width: auto;
+    height: 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 600;
+    text-shadow: #ddd;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*mod*/
+}
+
+.addContactBtn:hover {
+    cursor: pointer;
+    background: #00CED1;
+}
+
+/*Mobile responsiveness*/
+@media screen and (max-width: 768px) {
+    body {
+        max-width: 100%;
+        padding: 5px;
+    }
+    
+    #table {
+        margin: 10px 0;
+        padding: 10px;
+    }
+    
+    td img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* --Enter API Key-- */
+
+/* --Add Contact-- */
+
+/* --Edit Contact-- */

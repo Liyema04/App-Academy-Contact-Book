@@ -4,11 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact Book</title>
+        <link rel="stylesheet" href="style.css" defer>
     </head>
     <body onload="fetchContacts()">
-        <div id="table">Contacts loading...</div>
-        <button id="refresh" type="button">Refresh</button>
-        <button id="addContact" type="button">Add Contact</button>
+        <div class="container">
+            <span><h1>Contact List</h1></span>
+            <div id="table"><h3>Contacts loading...</h3></div>
+            <div id="buttonsFlex">
+                <button class="refreshBtn" id="refresh" type="button">Refresh</button>
+                <button class="addContactBtn" id="addContact" type="button">Add Contact</button>
+            </div>    
+        </div>
 
         <script src="config.js"></script>
         <script>
