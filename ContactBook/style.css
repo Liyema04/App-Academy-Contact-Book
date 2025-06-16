@@ -1,9 +1,9 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Ubuntu", sans-serif;
     max-width: 75%;
     margin: 10px auto;
     padding: 10px;
-    background-color: white; /*#ADD8E6 - Light blue color */
+    background: linear-gradient(0.25turn, #87CEFA, #ADD8E6, #87CEEB); /*#ADD8E6 - Light blue color */
 }
 /* --Base-- */
 .container {
@@ -24,7 +24,7 @@ span > h1 {
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*mod*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
     margin-bottom: 20px; /* Add space between heading and content box */
     padding: 6px;
 }
@@ -36,6 +36,7 @@ span > h1 {
     padding: 20px;
     margin: 20px 0;
     background-color: #B0C4DE; /* Powder Blue */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
 }
 
 #table > h3 {
@@ -126,7 +127,7 @@ td img {
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*mod*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
 }
 
 .refreshBtn:hover {
@@ -145,7 +146,7 @@ td img {
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*mod*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
 }
 
 .addContactBtn:hover {
@@ -153,9 +154,7 @@ td img {
     background: #00CED1;
 }
 
-.submitBtn {
-    margin-top: 10px;
-    width: 150px;
+.homeBtn {
     background:  #B0C4DE; /* Powder Blue */
     border-radius: 6px;
     border: none;
@@ -166,12 +165,38 @@ td img {
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.homeBtn:hover {
+    cursor: pointer;
+    background: #00CED1;
+}
+
+.submitBtn {
+    
+    margin-top: 10px;
+    width: 150px;
+    background:  aliceblue; /* #B0C4DE ->  Powder Blue */
+    border-radius: 6px;
+    border: 2px solid #00d19d;
+    width: auto;
+    height: 25px;
+    color: #9e9e9e;
+    font-weight: 600;
+    font-size: 600;
+    text-shadow: #ddd;
+    text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*mod*/
 }
 
 .submitBtn:hover {
     cursor: pointer;
     background: #00d19d;
+    color: white;
 }
 
 /*Mobile responsiveness*/
@@ -210,6 +235,7 @@ td img {
     padding: 16px;
     border-radius: 24px;
     background-color: #B0C4DE; /* Light steel Blue */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
 }
 
 .contentBox {
@@ -221,7 +247,7 @@ td img {
 }
 
 .content-text > h2 {
-    color: deepskyblue;
+    color: aliceblue;
     text-shadow: rgba(255, 255, 255, 0.164) 1px 0;
 }
 
@@ -253,13 +279,24 @@ td img {
     font-weight: 200;
     color: #d14d00;
 }
-
+/* Forms - Global */
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;  /* Changed from center to flex-start */
+    gap: 4px;
+    width: 250px;  /* Match input width */
+    margin: 0 auto;  /* Center the form itself */
 }
+
+form label {
+    text-align: left;
+    width: 100%;  /* Take full width of form */
+    margin-bottom: 2px;  /* Add some space between label and input */
+    
+}
+
+/* Forms - Enter API Key */
 
 form input[type=email] {
     width: 250px;
@@ -271,5 +308,48 @@ form input[type=email] {
 }
 
 /* --Add Contact-- */
+.editForm {
+    color: white;
+    font-weight: 600;
+    font-size: 600;
+}
+
+form input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid skyblue; /* #B0C4DE -> Light steel Blue */
+    border-radius: 6px;
+    padding: 5px 5px;
+    margin: 6px 0;
+}
+
+form input[type=file] {
+    display: none; 
+}
+
+.upload {
+    background:  #4682B4; /* Steel Blue */
+    border-radius: 6px;
+    border: 2px solid skyblue;
+    width: auto;
+    height: 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 600;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    display: block;
+    margin: 0 auto;
+    padding: 6px 12px;
+}
+
+.upload:hover {
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    color: rgb(190, 16, 16, 0.8);
+    background-color: #AFEEEE;
+    border: 2px solid rgba(190, 16, 16, 0.8);
+    border-style: dashed;
+}
 
 /* --Edit Contact-- */
