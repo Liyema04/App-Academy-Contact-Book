@@ -4,14 +4,38 @@
         <title>API Key</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" defer>
     </head>
     <body>
-        <div>Please enter a valid API key.</div>
-        <form>
-            <input type="email" id="apiKey" name="apiKey"/>
-            <button id="submitApiKey">Submit</button>
-        </form>
-
+        <div class="containerTwo">
+            <span><h1>ContactBook API</h1></span>
+            <div id="contentBox" class="contentBox">
+                <div class="content-text">
+                    <h2>Intermidiate Level - Week 6</h2>
+                    <p>This week, you'll be building a fully functional Contact Book app.
+                        Your most advanced project yet.
+                    <br>
+                    <p>What makes this one different? Instead of adding contacts manually, 
+                        your app will connect to an API to fetch data from an external database.</p>
+                    </div>
+                <br>
+                <div class="content-text">
+                    <h2>What is an API Key?</h2>
+                    <p>A special code that is used to access
+                        and communicate with an API.</p>
+                </div>    
+                <br>
+                <div class="enterApi">
+                    <p><strong>*Tip:</strong><em> Try email address you used to register<br>for LMS/FNB App Academy</em></p>
+                    <p><strong>*Tip:</strong><em> If your email address isn't working as the API key,<br> you can also use this one: appacademy@itvarsity.org</em></p>
+                    <span>Please enter a valid API key:</span>
+                    <form>
+                        <input type="email" id="apiKey" name="apiKey" placeholder="appacademy@itvarsity.org"/> 
+                        <button class="submitBtn" id="submitApiKey">Submit</button>
+                    </form>
+                </div>         
+            </div>    
+        </div>
         
         <script>
             let rootPath = "https://mysite.itvarsity.org/api/ContactBook/";

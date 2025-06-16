@@ -17,13 +17,16 @@ span > h1 {
     background:  #B0C4DE; /* Powder Blue */
     border-radius: 6px;
     border: none;
-    width: 200px;
+    min-width: 250px;
+    max-width: 300px;
     color: white;
     font-weight: 600;
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*mod*/
+    margin-bottom: 20px; /* Add space between heading and content box */
+    padding: 6px;
 }
 
 #table { /*mod*/
@@ -150,6 +153,27 @@ td img {
     background: #00CED1;
 }
 
+.submitBtn {
+    margin-top: 10px;
+    width: 150px;
+    background:  #B0C4DE; /* Powder Blue */
+    border-radius: 6px;
+    border: none;
+    width: auto;
+    height: 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 600;
+    text-shadow: #ddd;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*mod*/
+}
+
+.submitBtn:hover {
+    cursor: pointer;
+    background: #00d19d;
+}
+
 /*Mobile responsiveness*/
 @media screen and (max-width: 768px) {
     body {
@@ -169,6 +193,82 @@ td img {
 }
 
 /* --Enter API Key-- */
+.containerTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#contentBox {
+    margin-top: 20px;
+    width: 100%;
+    /*overflow-x: auto;*/
+    padding: 16px;
+    border-radius: 24px;
+    background-color: #B0C4DE; /* Light steel Blue */
+}
+
+.contentBox {
+    width: 50%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.content-text > h2 {
+    color: deepskyblue;
+    text-shadow: rgba(255, 255, 255, 0.164) 1px 0;
+}
+
+.content-text {
+    background:  #4682B4; /* Steel Blue */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /*mod*/;
+    padding: 10px;
+    color: white;
+}
+
+.enterApi {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    background-color: aliceblue;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.enterApi > span {
+    color: #4682B4;
+}
+
+.enterApi > p {
+    font-size: small;
+    font-weight: 200;
+    color: #d14d00;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form input[type=email] {
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #B0C4DE; /* Light steel Blue */
+    border-radius: 6px;
+    padding: 5px 5px;
+    margin: 6px 0;
+}
 
 /* --Add Contact-- */
 
