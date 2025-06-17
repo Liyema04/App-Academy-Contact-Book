@@ -131,6 +131,7 @@ td img {
 }
 
 .refreshBtn:hover {
+    transition: 0.2s ease-in-out;
     cursor: pointer;
     background: deepskyblue;
 }
@@ -150,16 +151,17 @@ td img {
 }
 
 .addContactBtn:hover {
+    transition: 0.2s ease-in-out;
     cursor: pointer;
     background: #00CED1;
 }
 
-.homeBtn {
+.homeBtn-1 {
     background:  #B0C4DE; /* Powder Blue */
     border-radius: 6px;
     border: none;
     width: auto;
-    height: 25px;
+    height: 35px;
     color: white;
     font-weight: 600;
     font-size: 600;
@@ -171,13 +173,13 @@ td img {
     
 }
 
-.homeBtn:hover {
+.homeBtn-1:hover {
+    transition: 0.2s ease-in-out;
     cursor: pointer;
     background: #00CED1;
 }
 
 .submitBtn {
-    
     margin-top: 10px;
     width: 150px;
     background:  aliceblue; /* #B0C4DE ->  Powder Blue */
@@ -194,6 +196,7 @@ td img {
 }
 
 .submitBtn:hover {
+
     cursor: pointer;
     background: #00d19d;
     color: white;
@@ -324,7 +327,7 @@ form input[type=text] {
 }
 
 form input[type=file] {
-    display: none; 
+    display: none;
 }
 
 .upload {
@@ -340,7 +343,7 @@ form input[type=file] {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
     display: block;
     margin: 0 auto;
-    padding: 6px 12px;
+    padding: 6px 12px 0;
 }
 
 .upload:hover {
@@ -353,3 +356,88 @@ form input[type=file] {
 }
 
 /* --Edit Contact-- */
+.upload[hidden] {
+    display: none !important;
+}
+
+.bottomButtons {
+    display: flex;
+    justify-content: center;
+}  
+
+.homeBtn-2 {
+    background:  #B0C4DE; /* Powder Blue */
+    border-radius: 6px;
+    border: none;
+    min-width: 80px;
+    height: 35px;
+    color: white;
+    font-weight: 600;
+    font-size: 600;
+    text-shadow: #ddd;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    display: block;
+    margin: 0 20px;
+}
+
+.homeBtn-2:hover {
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    background: #00CED1;
+}
+
+.editBtn {
+    background:  #B0C4DE; /* Powder Blue */
+    border-radius: 6px;
+    border: none;
+    min-width: 80px;
+    height: 35px;
+    color: white;
+    font-weight: 600;
+    font-size: 600;
+    text-shadow: #ddd;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    display: block;
+    margin: 0 20px;
+}
+
+.editBtn:hover {
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    background: #4682B4; /* Steel Blue */
+}
+
+.deleteBtn {
+    background:  #B0C4DE; /* Powder Blue */
+    border-radius: 6px;
+    border: none;
+    min-width: 80px;
+    height: 35px;
+    color: white;
+    font-weight: 600;
+    font-size: 600;
+    text-shadow: #ddd;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    display: block;
+    margin: 0 20px;
+}
+
+.deleteBtn:hover {
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    background: red;
+}
+
+#avatarImage img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 6px solid #4682B4; /* Steel Blue */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.445);
+}
