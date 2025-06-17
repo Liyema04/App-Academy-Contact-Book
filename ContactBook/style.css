@@ -3,7 +3,10 @@ body {
     max-width: 75%;
     margin: 10px auto;
     padding: 10px;
-    background: linear-gradient(0.25turn, #87CEFA, #ADD8E6, #87CEEB); /*#ADD8E6 - Light blue color */
+    background: linear-gradient(315deg, #00BFFF 3%, #003153 38%, #4682B4 68%, #00CED1 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed; /*#ADD8E6 - Light blue color */
 }
 /* --Base-- */
 .container {
@@ -14,7 +17,7 @@ body {
 }
 
 span > h1 {
-    background:  #B0C4DE; /* Powder Blue */
+    background:  rgba(176, 196, 222, 0.25); /* Powder Blue */
     border-radius: 6px;
     border: none;
     min-width: 250px;
@@ -24,7 +27,7 @@ span > h1 {
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.466); /*mod*/
     margin-bottom: 20px; /* Add space between heading and content box */
     padding: 6px;
 }
@@ -35,8 +38,11 @@ span > h1 {
     border-radius: 24px;
     padding: 20px;
     margin: 20px 0;
-    background-color: #B0C4DE; /* Powder Blue */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    background-color: rgb(176, 196, 222, 0.50); /* Powder Blue */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.466); /*mod*/
+    color: #ffffff;
+    text-shadow: #ffffffa4 1px 0;
+    font-size: x-large;
 }
 
 #table > h3 {
@@ -59,7 +65,7 @@ table :hover {
 }
 
 tr {
-    background-color: #E0FFFF; /* Light Cyan */
+    background-color: rgb(224, 255, 255, 0.25); /* #E0FFFF -> Light Cyan */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /*mod*/
 }
@@ -103,6 +109,7 @@ td img {
     width: 100%;
     height: 150px;
     border-radius: 50%;
+    border: 6px solid rgb(70, 130, 180, 0.25); /* Steel Blue */
     object-fit: cover;
 }
 
@@ -127,7 +134,7 @@ td img {
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.466); /*mod*/
 }
 
 .refreshBtn:hover {
@@ -147,7 +154,7 @@ td img {
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.466); /*mod*/
 }
 
 .addContactBtn:hover {
@@ -167,7 +174,7 @@ td img {
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.466); /*mod*/
     display: block;
     margin: 0 auto;
     
@@ -181,6 +188,7 @@ td img {
 
 .submitBtn {
     margin-top: 10px;
+    margin: 0 auto;
     width: 150px;
     background:  aliceblue; /* #B0C4DE ->  Powder Blue */
     border-radius: 6px;
@@ -237,8 +245,8 @@ td img {
     /*overflow-x: auto;*/
     padding: 16px;
     border-radius: 24px;
-    background-color: #B0C4DE; /* Light steel Blue */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    background-color: rgb(176, 196, 222, 0.50); /* Light steel Blue */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.466); /*mod*/
 }
 
 .contentBox {
@@ -255,7 +263,7 @@ td img {
 }
 
 .content-text {
-    background:  #4682B4; /* Steel Blue */
+    background:  rgb(70, 130, 180, 0.75); /*  #4682B4 -> Steel Blue */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /*mod*/;
     padding: 10px;
@@ -265,7 +273,7 @@ td img {
 .enterApi {
     border: 2px solid #ddd;
     border-radius: 12px;
-    background-color: aliceblue;
+    background-color: rgb(240, 248, 255, 0.25);
     width: auto;
     height: auto;
     margin: 10px;
@@ -304,7 +312,8 @@ form label {
 form input[type=email] {
     width: 250px;
     box-sizing: border-box;
-    border: 2px solid #B0C4DE; /* Light steel Blue */
+    border: 2px solid skyblue; /* #B0C4DE -> Light steel Blue */
+    background: none;
     border-radius: 6px;
     padding: 5px 5px;
     margin: 6px 0;
@@ -321,6 +330,7 @@ form input[type=text] {
     width: 100%;
     box-sizing: border-box;
     border: 2px solid skyblue; /* #B0C4DE -> Light steel Blue */
+    background: none;
     border-radius: 6px;
     padding: 5px 5px;
     margin: 6px 0;
@@ -340,7 +350,7 @@ form input[type=file] {
     font-weight: 600;
     font-size: 600;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.466); /*mod*/
     display: block;
     margin: 0 auto;
     padding: 6px 12px 0;
@@ -376,7 +386,7 @@ form input[type=file] {
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.466); /*mod*/
     display: block;
     margin: 0 20px;
 }
@@ -398,7 +408,7 @@ form input[type=file] {
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.466); /*mod*/
     display: block;
     margin: 0 20px;
 }
@@ -420,7 +430,7 @@ form input[type=file] {
     font-size: 600;
     text-shadow: #ddd;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.445); /*mod*/
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.466); /*mod*/
     display: block;
     margin: 0 20px;
 }
@@ -428,7 +438,7 @@ form input[type=file] {
 .deleteBtn:hover {
     transition: 0.2s ease-in-out;
     cursor: pointer;
-    background: red;
+    background: rgb(190, 16, 16);
 }
 
 #avatarImage img {
@@ -441,3 +451,67 @@ form input[type=file] {
     border: 6px solid #4682B4; /* Steel Blue */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.445);
 }
+
+/*Background animation*/
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+/*credits -> CodePen Home
+Gradient background with waves
+~Bárbara Rodríguez~ */
