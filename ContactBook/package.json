@@ -1,0 +1,11 @@
+{
+  "name": "contact-book",
+  "version": "1.0.0",
+  "description": "Contact Book Web Application",
+  "scripts": {
+    "start": "npx http-server ./public -p 8080 --cors"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

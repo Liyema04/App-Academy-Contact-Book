@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Add Contact</title>
-        <link rel="stylesheet" href="style.css" defer>
+        <link rel="stylesheet" href="src/css/style.css" defer>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
         </style>
@@ -36,7 +36,7 @@
         <br>
         <button class="homeBtn-1" id="homeLink" type="button">Home</button>
 
-        <script src="config.js"></script>
+        <script src="src/js/config.js"></script>
         <script>
             document.getElementById("submitForm").addEventListener('click', submitForm);
             document.getElementById("homeLink").addEventListener('click', homeLink);
@@ -66,7 +66,7 @@
                 })                
             }
             function homeLink() {
-                    window.open("index.html", "_self"); //Built-in function -> opens up a new tab -> '_self' -> opens in the same window.
+                    window.open("contacts.html", "_self"); //Built-in function -> opens up a new tab -> '_self' -> opens in the same window.
             }
 
         </script>

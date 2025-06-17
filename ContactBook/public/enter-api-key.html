@@ -4,7 +4,7 @@
         <title>API Key</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css" defer>
+        <link rel="stylesheet" href="src/css/style.css" defer>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
         </style>
@@ -46,8 +46,8 @@
 
             function setApiKey(e){
                 e.preventDefault();
-                
-                apiKey = document.getElementById("apiKey").value;
+                const apiKey = document.getElementById("apiKey").value;
+                                
                 fetch(rootPath + "controller/api-key/?apiKey=" + apiKey)
                         .then(function (response) {
                             return response.text();
@@ -56,12 +56,20 @@
                             
                             if (data == "1") {
                                 localStorage.setItem("apiKey", apiKey);
-                                window.open("index.html", "_self");
+                                window.open("contacts.html", "_self");
                             } else {
                                 alert(data + "Invalid API key entered!");
                             }
                         })
             }
+
+            //function setApiKey(e) {
+              //  e.preventDefault();
+              //  const key = document.getElementById("apiKey").value;
+              //  localStorage.setItem("apiKey", key);
+              //  window.location.href = "contacts.html"; // Update redirect
+            //}
+
         </script>
         <!--Wave animation-->
         <div class="wave"></div>

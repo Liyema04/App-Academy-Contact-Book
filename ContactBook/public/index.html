@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book</title>
+    <script>
+        window.onload = function() {
+            if (!localStorage.getItem("apiKey")) {
+                window.location.href = "enter-api-key.html";
+            } else {
+                window.location.href = "contacts.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Leave empty, page will redirect -->
+</body>
+</html>
